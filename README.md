@@ -28,6 +28,29 @@ In the output, you'll find options to open the app in a
 
 ## Add the explaination of your changes here 🦁
 
-...
+1. Performance
 
-------------------------------------------------------------------------------------------
+- I used a single useEffect hook to fetch the users data only once with the empty dependency array. This avoids unnecessary repeated fetches, and will only fetch the data once on render.
+
+- I extracted fetchUsers as an async function with try/catch block. This improves the readability of the function and properly handles any errors.
+
+- I stored all the users inside of a single state called "users". This reduces duplicated state management which makes the code cleaner. The original "filteredUsers" state is maintained separately.
+
+
+2. TypeScript
+
+- I defined a type for the "User" with the ID and name. This ensures better type safety and code clarity. This also makes it easier to catch bugs associated with the object.
+
+3. UI and Stylng
+
+- I replaced the ParallaxScrollView with the FlatList component to achieve a more simpler layout that allows scrolling to be possible to view all user results.
+
+- I added more structured styles for background, padding, and input container. This includes padding, colour etc, which makes them look visually appealing. 
+
+- I added a results counter at the top to let the user know how many results there are.
+
+- I added some extra UX features to the TextInput component such as: "clearButtonMode", "autoCorrect", "keyboardType" for better user typing experience and, I also added additional props to the FlatList component: "initialNumToRender" and "keyboardShouldPersistTaps" for better accessibility and performance tuning for list.
+
+
+
+
