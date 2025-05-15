@@ -41,7 +41,7 @@ In the output, you'll find options to open the app in a
 
 - I defined a type for the "User" with the ID and name. This ensures better type safety and code clarity. This also makes it easier to catch bugs associated with the object.
 
-### 3. UI and Stylng
+### 3. UI and Styling
 
 - I replaced the ParallaxScrollView with the FlatList component to achieve a more simpler layout that allows scrolling to be possible to view all user results.
 
